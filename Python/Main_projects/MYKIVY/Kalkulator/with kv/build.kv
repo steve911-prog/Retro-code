@@ -1,0 +1,247 @@
+
+    
+<EngineerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: (1, .035)
+            spacing: 2
+            
+
+            Button:
+                text:'History'
+                on_press: app.screen_manager.current = 'history'
+            Button:
+                text:'Usual'
+                on_press: app.screen_manager.current = 'usual'
+            Button:
+                text:'Engineer'
+                on_press: app.screen_manager.current = 'engineer'
+
+        Label:
+            text:' '
+            color:[0,1,1,1]
+            font_size: 32
+            halign: 'right'
+            size_hint: (1, .23)
+            text_size: (365, 78)
+
+        GridLayout:
+            cols: 5
+            spacing: -1
+            size_hint: (1, .28)
+
+            Button:
+                text:'C'
+                on_press: self.zerospace
+            Button:
+                text:'pi'
+                on_press: self.pi    
+            Button:
+                text:'X²'
+                on_press: self.xtwo
+            Button:
+                text:'1/x'
+                on_press: self.drob
+            Button:
+                text:'<'
+                on_press: self.backspace
+            Button:
+                text:'log'
+                on_press: self.log
+            Button:
+                text:'√X'
+                on_press: self.sqrt
+            Button:
+                text:'()'
+                on_press: self.func    
+            Button:
+                text:'|x|'
+                on_press: self.fabs
+            Button:
+                text:'+'
+                on_press: self.add_operation    
+            Button:
+                text:'cos'
+                on_press: self.cos
+            Button:
+                text:'7'
+                on_press: self.add_number
+            Button:
+                text:'8'
+                on_press: self.add_number
+            Button:
+                text:'9'
+                on_press: self.add_number
+            Button:
+                text:'-'
+                on_press: self.add_operation
+            Button:
+                text:'sin'
+                on_press: self.add_number    
+            Button:
+                text:'4'
+                on_press: self.add_number
+            Button:
+                text:'5'
+                on_press: self.add_number
+            Button:
+                text:'6'
+                on_press: self.add_number
+            Button:
+                text:'/'
+                on_press: self.add_operation
+            Button:
+                text:'tan'
+                on_press: self.add_number
+            Button:
+                text:'1'
+                on_press: self.add_number
+            Button:
+                text:'2'
+                on_press: self.add_number
+            Button:
+                text:'3'
+                on_press: self.add_number
+            Button:
+                text:'*'
+                on_press: self.add_operation
+            Button:
+                text:'ceil'
+                on_press: self.add_number
+            Button:
+                text:'%'
+                on_press: self.add_operation
+            Button:
+                text:'0'
+                on_press: self.add_operation
+            Button:
+                text:'.'
+                on_press: self.add_operation
+            Button:
+                text:'='
+                on_press: calc_result
+
+<UsualScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            Button:
+                text:'History'
+                on_press: app.screen_manager.current = 'history'
+            Button:
+                text:'Usual'
+                on_press: app.screen_manager.current = 'usual'
+            Button:
+                text:'Egineer'
+                on_press: app.screen_manager.current = 'engineer'
+        Label:
+            text:' '
+            color:[0,1,1,1]
+            font_size: 32
+            halign: 'right'
+            size_hint: (1, .23)
+            text_size: (365, 78)    
+
+        GridLayout:
+            Button:
+                text:'C'
+                on_press:self.zerospace
+            Button:
+                text:'<'
+                on_press:self.backspace
+            Button:
+                text:'|x|'
+                on_press:self.fabs
+            Button:
+                text:'()'
+                on_press:self.func
+            Button:
+                text:'7'
+                on_press:self.add_number
+            Button:
+                text:'8'
+                on_press:self.add_number    
+            Button:
+                text:'9'
+                on_press:self.add_number    
+            Button:
+                text:'*'
+                on_press:self.add_operation
+            Button:
+                text:'4'
+                on_press:self.add_number
+            Button:
+                text:'7'
+                on_press:self.add_number
+            Button:
+                text:'*'
+                on_press:self.add_operation
+            Button:
+                text:'4'
+                on_press:self.add_number
+            Button:
+                text:'5'
+                on_press:self.add_number
+            Button:
+                text:'6'
+                on_press:self.add_number
+            Button:
+                text:'-'
+                on_press:self.add_operation
+            Button:
+                text:'1'
+                on_press:self.add_number
+            Button:
+                text:'2'
+                on_press:self.add_number
+            Button:
+                text:'3'
+                on_press:self.add_number
+            Button:
+                text:'+'
+                on_press:self.add_operation
+            Button:
+                text:'/'
+                on_press:self.add_operation
+            Button:
+                text:'0'
+                on_press:self.add_operation
+            Button:
+                text:'='
+                on_press:self.calc_result
+
+<HistoryScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            Button:
+                text:'History'
+                on_press: app.screen_manager.current = 'history'
+            Button:
+                text:'Usual'
+                on_press: app.screen_manager.current = 'usual'
+            Button:
+                text:'Egineer'
+                on_press: app.screen_manager.current = 'engineer'
+        Label:
+            text: 'history'                        #str(self.read_file)
+            color:[0,1,1,1]
+            font_size: 20
+            size_hint: (1, .73)
+            text_size: (355, 430)
+        GridLayout:
+            cols: 3
+            spacing: -1
+            size_hint: (1, .05)
+
+            Widget
+            Button:
+                text: 'Delete'
+                on_press: self.c_history
+            Widget
+
+
+                
+                

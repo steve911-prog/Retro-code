@@ -1,0 +1,11 @@
+from turtle import *
+goto(50,-20)
+goto(0,30)
+goto(-10,30)
+goto(-15,25)
+goto(-10,20)
+goto(-10,0)
+goto(0,-10)
+goto(20,-15)
+goto(35,-15)
+goto(50,-20)

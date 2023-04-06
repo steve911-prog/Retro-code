@@ -1,0 +1,113 @@
+#: kivy 1.9
+#: import ScreenManager kivy.uix.screenmanager.ScreenManager
+#: import Screen kivy.uix.screenmanager.ScreenManager
+#: import NewGameScreen screen
+#: import LoadGameScreen screen
+
+ScreenManager:
+    id: screen_manager
+    #transition: FadeTransition()
+    MenuScreen:
+        id: menu_screen
+        name: 'MenuScreen'
+        manager: 'screen_manager'
+    NewGameScreen:
+        id: newgame_screen
+        name: 'NewGameScreen'
+        manager: 'screen_manager'
+    LoadGameScreen: 
+        id: loadgame_screen
+        name: 'LoadGameScreen'
+        manager: 'screen_manager'
+
+<MenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'ASCII Life'
+            font_size: 50
+        Button:
+            text: 'New Game'
+            font_size: 30
+            on_release: app.root.current = 'newgame'
+        Button:
+            text: 'Load Game'
+            font_size: 30
+            on_release: app.root.current = 'loadgame'
+        Button:
+            text: 'Settings'
+            font_size: 30
+            on_release: app.root.current = 'something'
+<NewGameScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Game Length in Days'
+                font_size: 30
+            BoxLayout:
+                orientation: 'horizontal'
+                ToggleButton:
+                    text: '100'
+                    state: 'down'
+                    group: 'newgame_days'
+                    font_size: 30
+                ToggleButton:
+                    text: '200'
+                    group: 'newgame_days'
+                    font_size: 30
+            BoxLayout:
+                orientation: 'horizontal'
+                ToggleButton:
+                    text: '365'
+                    group: 'newgame_days'
+                    font_size: 30
+                ToggleButton:
+                    text: '3650'
+                    group: 'newgame_days'
+                    font_size: 30
+            ToggleButton:
+                text: 'Unlimited'
+                group: 'newgame_days'
+                font_size: 30
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: (1, .5)
+            Label:
+                text: 'Difficulty (Score Multiplier)'
+                font_size: 30
+            BoxLayout:
+                orientation: 'horizontal'
+                ToggleButton:
+                    text: 'Easy (x1)'
+                    state: 'down'
+                    group: 'newgame_difficulty'
+                    font_size: 30
+                ToggleButton:
+                    text: 'Medium (x2.5)'
+                    group: 'newgame_difficulty'
+                    font_size: 30
+                ToggleButton:
+                    text: 'Hard (x5)'
+                    group: 'newgame_difficulty'
+                    font_size: 30
+<LoadGameScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'load a game'
+            font_size: 30
+        Widget:
+            canvas:
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+        BoxLayout:
+            Button:
+                text: 'Menu'
+                font_size: 30
+                on_release: app.root.current = 'menu'
+            Button:
+                text: 'text'
+                font_size: 30
