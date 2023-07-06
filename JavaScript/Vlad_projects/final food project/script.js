@@ -1,7 +1,6 @@
 // TODO
-/*import FetchWrapper from "./fetch-wrapper.js"
-const API = new FetchWrapper("https://firestore.googleapis.com/v1/projects/
-jsdemo-3f387/databases/(default)/documents/project");*/
+// import FetchWrapper from "./fetch-wrapper.js"
+// const API = new FetchWrapper("https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/project");
 const coefo = {
     carbs:{
         pizza: 16,
